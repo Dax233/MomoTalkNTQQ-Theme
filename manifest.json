@@ -8,8 +8,8 @@
     "icon": "./icon.png",
     "authors": [
         {
-            "name": "MiyakoLol",
-            "link": "https://github.com/MiyakoLol"
+            "name": "Dax233",
+            "link": "https://github.com/Dax233"
         }
     ],
     "platform": ["win32", "linux", "darwin"],
@@ -19,7 +19,7 @@
         "preload": "./src/preload.js"
     },
     "repository": {
-        "repo": "MiyakoLol/MomoTalkNTQQ-Theme",
+        "repo": "Dax233/MomoTalkNTQQ-Theme",
         "branch": "v4",
         "release": {
             "tag": "latest",
