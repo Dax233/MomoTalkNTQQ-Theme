@@ -209,16 +209,16 @@ const concatBubble = (floatAvatar = true) => {
 
                 const avatarLower = lower.querySelector('span.avatar-span')
                 const avatarUpper = upper.querySelector('span.avatar-span')
-                const usernameNodeLower = lower.querySelector('div.user-name')
+                const usernameNodeLower = upper.querySelector('div.user-name')
                 const usernameLower = avatarLower.getAttribute('aria-label')
                 const usernameUpper = avatarUpper.getAttribute('aria-label')
                 const contentLower = lower.querySelector('div.msg-content-container')
                 if (!isLowerTimestamp && usernameUpper === usernameLower) {
                     const bubbleLower = lower.querySelector('div.msg-content-container')
-                    // 强制覆盖upper message的margin-bottom
-                    upper.style.setProperty('margin-bottom', '5px', 'important')
-                    // 隐藏upper头像
-                    avatarLower.style.display = 'none'
+                    // 强制覆盖lower message的margin-bottom
+                    lower.style.setProperty('margin-bottom', '5px', 'important')
+                    // 隐藏lower头像
+                    avatarUpper.style.display = 'none'
                     // lower的username 不显示
                     if (usernameNodeLower) {
                         usernameNodeLower.style.marginBottom = '0'
@@ -247,6 +247,7 @@ const concatBubble = (floatAvatar = true) => {
                         heightArr[upperIndex] = upperContainer ? upperContainer.offsetHeight : 0
                     }
                 }
+                
                 resolve()
             } catch (error) {
                 resolve()
@@ -297,7 +298,7 @@ const concatBubble = (floatAvatar = true) => {
                                 const avatar = currMsgNodeList[start].querySelector('span.avatar-span')
                                 if (totalHeight > 0 && avatar) {
                                     if (!currMsgNodeList[start].querySelector('.message-container--self')) {
-                                        avatar.style.height = totalHeight + (end - start) * 3 + 'px'
+                                        avatar.style.height = '0px'
                                     }
                                 }
                                 start = i
